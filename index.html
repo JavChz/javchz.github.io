@@ -1,39 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <meta name="description"
+    content="Javier Garcia – Front End Developer Open source experiment projects. Quick access to live web apps built with React, TypeScript and modern tooling.">
+  <meta name="author" content="Javier Garcia">
+  <title>Javier Garcia – Open Source Projects</title>
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  <title>JavChz</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="blue">
-  <div class="container center ">
-    <div class="row center" >
-       <div class="col s12 center">
-         <div class="card z-depth-3">
 
-           <div class="card-content">
+<body>
 
+  <!-- Noise texture overlay -->
+  <div class="noise-overlay"></div>
 
-             <div class="center">
-               <img src="./icon.png" style="max-width: 200px;">
-             </div>
-             <span class="card-title">JavChz</span>
-             <p></p>
-             <p>Website Development in progress</p>
-             <p><a href="http://twitter.com/javchz">@JavChz</a> at Twitter</p>
-           </div>
-         </div>
-       </div>
-     </div>
+  <!-- Ambient glow orbs -->
+  <div class="glow-layer">
+    <div class="glow-orb glow-orb--purple"></div>
+    <div class="glow-orb glow-orb--cyan"></div>
+    <div class="glow-orb glow-orb--pink"></div>
   </div>
+
+  <!-- ===== Main Content ===== -->
+  <main class="main-content">
+
+    <!-- Hero -->
+    <section class="hero animate-fade-up" id="hero">
+      <div class="hero__avatar-wrapper">
+        <div class="hero__avatar-glow"></div>
+        <img src="./icon.png" alt="Javier Garcia" class="hero__avatar">
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__name">Javier Garcia</span>
+      </h1>
+      <p class="hero__subtitle">
+        Frontend Developer &amp; building with
+        <span class="accent-cyan">React</span>,
+        <span class="accent-purple">TypeScript</span> &amp;
+        <span class="accent-pink">Tailwind CSS</span>.
+      </p>
+      <a href="https://github.com/JavChz" target="_blank" rel="noopener noreferrer" class="hero__cta" id="cta-github">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg>
+        GitHub
+      </a>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects animate-fade-up-d1" id="projects">
+      <div class="projects__header">
+        <p class="projects__label">Open Source</p>
+        <h2 class="projects__title">Experiment Projects</h2>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- Card: TaskTracker -->
+        <a href="https://javchz.github.io/tasktracker/" target="_blank" rel="noopener noreferrer" class="card"
+          id="project-tasktracker">
+          <div class="card__img-wrap">
+            <img src="./assets/tasktracker_preview.png" alt="TaskTracker app" class="card__img">
+            <div class="card__img-overlay"></div>
+            <div class="card__badge"><span class="card__badge-dot"></span>Live</div>
+          </div>
+          <div class="card__body">
+            <div class="card__heading">
+              <span class="card__emoji">⏱️</span>
+              <h3 class="card__name">TaskTracker</h3>
+            </div>
+            <p class="card__desc">
+              Task tracking with real-time timer, goal management, live statistics and CSV export.
+            </p>
+            <div class="card__tags">
+              <span class="tag tag--react">React</span>
+              <span class="tag tag--ts">TypeScript</span>
+              <span class="tag tag--vite">Vite</span>
+              <span class="tag tag--tailwind">Tailwind</span>
+              <span class="tag tag--zustand">Zustand</span>
+            </div>
+            <div class="card__visit">
+              <span>Visit App</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card: ComfyRead -->
+        <a href="https://javchz.github.io/ComfyRead/" target="_blank" rel="noopener noreferrer" class="card"
+          id="project-comfyread">
+          <div class="card__img-wrap">
+            <img src="./assets/comfyread_preview.png" alt="ComfyRead app" class="card__img">
+            <div class="card__img-overlay"></div>
+            <div class="card__badge"><span class="card__badge-dot"></span>Live</div>
+          </div>
+          <div class="card__body">
+            <div class="card__heading">
+              <span class="card__emoji">📖</span>
+              <h3 class="card__name">ComfyRead</h3>
+            </div>
+            <p class="card__desc">
+              Distraction-free reading zone. Paste ugly documents and read them in a beautiful, warm-toned interface
+              with light/dark mode.
+            </p>
+            <div class="card__tags">
+              <span class="tag tag--react">React</span>
+              <span class="tag tag--ts">TypeScript</span>
+              <span class="tag tag--vite">Vite</span>
+              <span class="tag tag--tailwind">Tailwind</span>
+            </div>
+            <div class="card__visit">
+              <span>Visit App</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card: My Home -->
+        <a href="https://javchz.github.io/my-home/" target="_blank" rel="noopener noreferrer" class="card"
+          id="project-myhome">
+          <div class="card__img-wrap">
+            <img src="./assets/myhome_preview.png" alt="My Home app" class="card__img">
+            <div class="card__img-overlay"></div>
+            <div class="card__badge"><span class="card__badge-dot"></span>Live</div>
+          </div>
+          <div class="card__body">
+            <div class="card__heading">
+              <span class="card__emoji">🏠</span>
+              <h3 class="card__name">My Home</h3>
+            </div>
+            <p class="card__desc">
+              Custom browser homepage with a personalised bookmark grid. Replace your default new tab with a curated
+              link collection.
+            </p>
+            <div class="card__tags">
+              <span class="tag tag--react">React</span>
+              <span class="tag tag--ts">TypeScript</span>
+              <span class="tag tag--js">JavaScript</span>
+              <span class="tag tag--css">CSS</span>
+            </div>
+            <div class="card__visit">
+              <span>Visit App</span>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer animate-fade-up-d2">
+    <p class="footer__text">&copy; 2024 Javier Garcia</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
 </body>
+
 </html>
