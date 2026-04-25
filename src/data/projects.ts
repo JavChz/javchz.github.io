@@ -31,4 +31,14 @@ export const projects: Project[] = [
     image: "/assets/myhome_preview.png",
     tags: ["React", "TypeScript", "JavaScript", "CSS"],
   },
+  {
+    name: "ZeroHour",
+    icon: "hourglass_empty",
+    description:
+      "A countdown application where timer configurations are encoded directly in the URL, allowing them to be instantly shared without a backend.",
+    liveUrl: "https://javchz.github.io/ZeroHour/",
+    repoUrl: "https://github.com/JavChz/ZeroHour",
+    image: "/assets/zerohour_preview.jpg",
+    tags: ["React", "TypeScript", "Vite", "Tailwind"],
+  },
 ];
